@@ -1,0 +1,90 @@
+<svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="sp-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#050505"/>
+    <stop offset="100%" stop-color="#0a0f0a"/>
+  </linearGradient>
+  <linearGradient id="sp-top" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00FF41"/>
+    <stop offset="100%" stop-color="#80FFB0"/>
+  </linearGradient>
+  <linearGradient id="sp-right" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#00C8FF"/>
+    <stop offset="100%" stop-color="#007ACC"/>
+  </linearGradient>
+  <linearGradient id="sp-left" x1="1" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00A028"/>
+    <stop offset="100%" stop-color="#003A10"/>
+  </linearGradient>
+  <linearGradient id="sp-top2" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00DD38"/>
+    <stop offset="100%" stop-color="#60FF90"/>
+  </linearGradient>
+  <linearGradient id="sp-top3" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00BB30"/>
+    <stop offset="100%" stop-color="#40FF70"/>
+  </linearGradient>
+  <filter id="sp-glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="18" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="sp-softglow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="32" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width="512" height="512" rx="96" fill="url(#sp-bg)"/>
+
+<!-- Ambient glow behind shape -->
+<ellipse cx="256" cy="270" rx="130" ry="80" fill="#00FF41" opacity="0.07" filter="url(#sp-softglow)"/>
+<ellipse cx="256" cy="270" rx="90" ry="55" fill="#00F5FF" opacity="0.06" filter="url(#sp-softglow)"/>
+
+<!-- ISOMETRIC STACKED LAYERS — 3 layers, each offset upward -->
+
+<!-- Layer 1 (bottom) -->
+<!-- Left face -->
+<polygon points="140,310 256,378 256,346 140,278" fill="url(#sp-left)" opacity="0.85"/>
+<!-- Right face -->
+<polygon points="256,378 372,310 372,278 256,346" fill="url(#sp-right)" opacity="0.85"/>
+<!-- Top face -->
+<polygon points="140,278 256,346 372,278 256,210" fill="url(#sp-top3)" filter="url(#sp-glow)" opacity="0.9"/>
+
+<!-- Layer 2 (middle) -->
+<!-- Left face -->
+<polygon points="155,258 256,314 256,282 155,226" fill="url(#sp-left)" opacity="0.9"/>
+<!-- Right face -->
+<polygon points="256,314 357,258 357,226 256,282" fill="url(#sp-right)" opacity="0.9"/>
+<!-- Top face -->
+<polygon points="155,226 256,282 357,226 256,170" fill="url(#sp-top2)" filter="url(#sp-glow)" opacity="0.92"/>
+
+<!-- Layer 3 (top) -->
+<!-- Left face -->
+<polygon points="170,206 256,250 256,218 170,174" fill="url(#sp-left)"/>
+<!-- Right face -->
+<polygon points="256,250 342,206 342,174 256,218" fill="url(#sp-right)"/>
+<!-- Top face -->
+<polygon points="170,174 256,218 342,174 256,130" fill="url(#sp-top)" filter="url(#sp-glow)"/>
+
+<!-- Edge highlights on top layer -->
+<polyline points="170,174 256,130 342,174" fill="none" stroke="#C8FFC8" stroke-width="1.2" opacity="0.5"/>
+<line x1="256" y1="130" x2="256" y2="218" stroke="#C8FFC8" stroke-width="0.8" opacity="0.3"/>
+
+<!-- Sync arc symbol on top face — subtle -->
+<g transform="translate(256,168) rotate(-30) skewX(10)">
+  <path d="M-14,0 A14,14 0 0,1 14,0" fill="none" stroke="#050505" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <polygon points="14,-1 17,3 11,3" fill="#050505" opacity="0.6"/>
+</g>
+
+<!-- Wordmark -->
+<text x="256" y="418" font-family="'SF Mono', 'Fira Code', 'Courier New', monospace" font-size="38" font-weight="700" fill="#C8FFC8" text-anchor="middle" letter-spacing="4">SYNCPAD</text>
+
+<!-- Tagline dot separator -->
+<text x="256" y="448" font-family="'SF Mono', 'Fira Code', 'Courier New', monospace" font-size="11" fill="#00FF41" text-anchor="middle" letter-spacing="3" opacity="0.7">MEMORY · LAYERS · SYNC</text>
+</svg>
