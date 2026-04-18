@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "source": "startup_generator",
+    "generated_from": "output/projects/Syncpad/profile.json",
+    "notes": "Field names and values match Surge Discovery create form (Full Mode, 9 steps)"
+  },
+  "project_name": "Syncpad",
+  "tagline": "TON-native encrypted memory persistence for AI agents inside Telegram mini-apps.",
+  "full_description": "Syncpad solves the statelessness problem of AI-powered TON mini-apps by providing a wallet-keyed memory layer that stores structured agent context as versioned, encrypted blobs anchored to TON's cell-based data model. Each memory shard is encrypted client-side using AES-256-GCM keyed to the user's TON wallet before being committed to TON Storage, with a content hash written to a FunC smart contract that emits auditable on-chain events for every write. Developers integrate via a TypeScript SDK",
+  "category": "AI Agents & Automation",
+  "stage": "Prototype",
+  "logo": {
+    "local_path": "/Users/aliev_murat/Documents/Claude/Projects/SURGE/startup-generator/output/logos/Syncpad.svg",
+    "url": "",
+    "format": "svg",
+    "note": "Surge requires PNG or JPG. Convert SVG → PNG before upload."
+  },
+  "ai_tools": [
+    "Cursor",
+    "Claude Code",
+    "GitHub Copilot"
+  ],
+  "tech_stack": {
+    "languages": [
+      "TypeScript SDK"
+    ],
+    "dev_tools": [
+      "TON FunC smart contracts",
+      "TL-B schema for cell serialization",
+      "TON Storage for encrypted blob persistence",
+      "AES-256-GCM client-side encryption",
+      "TON Connect 2.0 wallet authentication",
+      "Telegram Mini App WebView bridge",
+      "Node.js"
+    ]
+  },
+  "pitch_deck": {
+    "local_path": "/Users/aliev_murat/Documents/Claude/Projects/SURGE/startup-generator/output/decks/Syncpad_deck.pptx",
+    "url": "",
+    "format": "pptx",
+    "note": "Surge requires PDF. Convert PPTX → PDF before upload."
+  },
+  "whitepaper": {
+    "local_path": "",
+    "url": ""
+  },
+  "pitch_video": {
+    "url": "",
+    "source": "youtube",
+    "note": "Must be public/unlisted YouTube URL. Max 800 seconds."
+  },
+  "links": {
+    "website": "https://AllievMuro.github.io/syncpad",
+    "github": "https://github.com/AllievMuro/syncpad",
+    "telegram": "",
+    "x_twitter": ""
+  },
+  "team_description": "The founding team has combined experience in TON smart contract development and Telegram bot infrastructure, with prior work shipping production FunC contracts and TypeScript SDKs used by mini-app developers across the TON ecosystem.",
+  "team_members": [],
+  "roadmap": [
+    {
+      "quarter": "Q1 2026",
+      "status": "Completed",
+      "goal": "Ship a working prototype of the core memory write/read cycle on TON testnet with client-side encryption.",
+      "deliverables": [
+        "FunC smart contract deployed to TON testnet that anchors memory content hashes and emits write events",
+        "Client-side AES-256-GCM encryption module keyed to TON wallet address with TL-B cell serialization",
+        "Proof-of-concept TypeScript SDK with write and read functions tested against a single demo Telegram mini-app"
+      ]
+    },
+    {
+      "quarter": "Q2 2026",
+      "status": "In Progress",
+      "goal": "Launch public beta SDK on TON mainnet with audit log UI and onboard 10 external mini-app developer teams.",
+      "deliverables": [
+        "Production FunC contract deployed to TON mainnet with memory versioning, TTL enforcement, and access revocation logic",
+        "Full TypeScript SDK release (write, read, diff) published to npm with TON Connect 2.0 wallet auth integration",
+        "Web-based memory audit dashboard allowing users to inspect per-app write events linked to their TON wallet"
+      ]
+    },
+    {
+      "quarter": "Q3 2026",
+      "status": "Upcoming",
+      "goal": "Enable cross-app memory portability with wallet-signed consent and reach 50,000 active memory wallets.",
+      "deliverables": [
+        "Cross-app memory sharing protocol: wallet-signed consent transactions granting scoped read access to external mini-apps",
+        "Memory diff and conflict resolution logic in the SDK for multi-app concurrent writes to shared context shards",
+        "Developer portal with usage analytics, per-app memory commit counts, and mainnet cost estimator for teams"
+      ]
+    }
+  ],
+  "revenue_sources": {
+    "stripe": null,
+    "paypal": null,
+    "shopify": null
+  },
+  "user_data": {
+    "google_analytics": null,
+    "mixpanel": null
+  },
+  "publish_readiness": {
+    "required": {
+      "logo": true,
+      "project_name": true,
+      "tagline": true,
+      "category": true,
+      "full_description": true,
+      "team": true,
+      "pitch_deck": true,
+      "pitch_video": false
+    },
+    "optional": {
+      "tech_stack": true,
+      "roadmap": true,
+      "socials": true,
+      "revenue_sources": false,
+      "user_data": false
+    },
+    "summary": "Required: 7/8, Optional: 3/5"
+  }
+}
